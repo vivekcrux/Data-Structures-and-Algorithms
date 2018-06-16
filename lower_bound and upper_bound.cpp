@@ -1,10 +1,11 @@
-#include <bits/stdc++.h>
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
 /*Implementation of lower_bound function
 /*Returns index of the first element in the range [s,e] which 
 does not compare less than val.
+Array must be sorted
 */
 int lower_bound(int arr[],int s,int e,int val)
 {
@@ -32,6 +33,7 @@ int lower_bound(int arr[],int s,int e,int val)
 /*Implementation of upper_bound function
 Returns index of the first element in the range [s,e] which 
 compares greater than val.
+Array must be sorted
 */
 int upper_bound(int arr[],int s,int e,int val)
 {
@@ -57,15 +59,9 @@ int upper_bound(int arr[],int s,int e,int val)
 
 int main()
 {
-    int n,k,i,j,a[100001];
-    cin>>n>>k;
-    for(i=0;i<n;i++)
-    {
-        cin>>a[i];
-    }
-    sort(a,a+n);
-    j = lower_bound(a,0,n-1,1000);
-    j = upper_bound(a,0,n-1,5);
-    cout<<j<<endl;
+    int n=8,i,j,a[]={1,2,2,3,4,5,7,9};
+
+    cout<<a[lower_bound(a,0,n-1,6)]<<endl;
+    cout<<a[upper_bound(a,0,n-1,3)]<<endl;
     return 0;
 }

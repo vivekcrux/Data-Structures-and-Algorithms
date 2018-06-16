@@ -5,7 +5,8 @@ using namespace std;
 /*
 PriorityHeap class takes two template arguements
 first template arguement: data-type of key
-second template arguement: a functor(function object) for key comparison
+second template arguement: a functor(function object) 
+for key comparison(Default: less<key>)
 */
 template <class key,class Compare=less<key>>
 class PriorityHeap

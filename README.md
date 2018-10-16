@@ -1,2 +1,2 @@
 # Data-Structures-and-Algorithms
-This repository is to record all the new concepts related to data structures and algorithm I'll learn.
+This Repository is to Record all the New Concepts Related to Data Structures and Algorithm I'll learn.

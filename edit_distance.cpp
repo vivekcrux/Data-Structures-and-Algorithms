@@ -1,18 +1,17 @@
-//EDIT DISTANCE 
-//PROBLEM LINK: https://www.spoj.com/problems/EDIST/
 
 #include <bits/stdc++.h>
+#define lld long long int
 using namespace std;
  
 int main()
 {
-    long t;
+    lld t;
     cin>>t;
     while(t--)
     {
         string a,b;
         cin>>a>>b;
-        long dp[2001][2001]={0},i,j;
+        lld dp[2001][2001]={0},i,j;
         for(i=0;i<=a.length();i++)
         {
             for(j=0;j<=b.length();j++)
@@ -28,5 +27,4 @@ int main()
         }
         cout<<dp[a.length()][b.length()]<<endl;
     }
-	return 0;
 }

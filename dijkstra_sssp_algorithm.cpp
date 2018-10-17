@@ -1,3 +1,6 @@
+// A C++ program for Dijkstra's single source shortest path algorithm. 
+// The program is for adjacency list representation of the graph
+	
 #include <iostream>
 #include <vector>
 #include <climits>
@@ -7,14 +10,18 @@ using namespace std;
 
 typedef long long ll;
 typedef pair<ll,ll> pll;
+// A utility function to find the vertex with minimum distance value, from 
+// the set of vertices not yet included in shortest path tree 
 
 vector<ll> dijkstra(vector<pll> graph[], ll n, ll src)
 {
 	vector<ll> dist(n + 1, LONG_MAX);
 	vector<bool> visited(n + 1, false);
 	priority_queue<pll, vector<pll>, greater<pll>> q;
-
+	 // Distance of source vertex from itself is always 0 
 	dist[src] = 0;
+	// The output array.  dist[i] will hold the shortest 
+                      // distance from src to i 
 	q.push({dist[src], src});
 
 	while(!q.empty())
@@ -40,12 +47,14 @@ vector<ll> dijkstra(vector<pll> graph[], ll n, ll src)
 }
 
 
+// driver program to test above function 
+
 int main(int argc, char const *argv[])
 {
 
 	ll n = 5;
 	vector<pll> graph[n + 1];
-	graph[1].push_back({2, 1});
+	graph[1].push_back({2, 1}); // push the edge 
 	graph[1].push_back({3, 4});
 	graph[2].push_back({4, 2});
 	graph[2].push_back({5, 6});

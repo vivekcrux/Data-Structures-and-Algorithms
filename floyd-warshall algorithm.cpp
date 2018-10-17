@@ -1,5 +1,5 @@
 
-#include <bits/stdc++.h>
+#include <iostream>
 #include <climits>
 #define lld long long int
 using namespace std;
@@ -8,7 +8,7 @@ using namespace std;
 
 int main()
 {
-	lld graph[1001][1001],i,j,k,n,m;
+	int graph[1001][1001],i,j,k,n,m;
 	cin>>n>>m;	//number of vertices and edges respectively
 
 	for(i=1;i<=n;i++)
@@ -41,9 +41,9 @@ int main()
 	}
 
 	//Resulting all pair shortest path in given graph
-	for(lld u=1;u<=n;u++)
+	for(int u=1;u<=n;u++)
 	{
-		for(lld v=1;v<=n;v++)
+		for(int v=1;v<=n;v++)
 		{
 			cout<<graph[u][v]<<" ";
 		}

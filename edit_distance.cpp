@@ -1,17 +1,17 @@
 
 #include <bits/stdc++.h>
-#define lld long long int
+
 using namespace std;
  
 int main()
 {
-    lld t;
+    long t;
     cin>>t;
     while(t--)
     {
         string a,b;
         cin>>a>>b;
-        lld dp[2001][2001]={0},i,j;
+        long dp[2001][2001]={0},i,j;
         for(i=0;i<=a.length();i++)
         {
             for(j=0;j<=b.length();j++)

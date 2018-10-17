@@ -20,7 +20,7 @@ int main()
 
 	for(i=1;i<=m;i++)
 	{
-		lld u,v,w;
+		int u,v,w;
 		cin>>u>>v>>w;
 		graph[u][v] = w;				//input graph
 		graph[v][u] = w;				//Shortest distance between (i,j) using atmost one edge

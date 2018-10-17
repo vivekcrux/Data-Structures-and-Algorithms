@@ -1,7 +1,6 @@
 
 #include <iostream>
 #include <climits>
-#define lld long long int
 using namespace std;
 
 #define INF 999999999

@@ -1,13 +1,14 @@
-//Floyd-Warshall Algorithm: all pair shortest path
-#include <iostream>
+
+#include <bits/stdc++.h>
 #include <climits>
+#define lld long long int
 using namespace std;
 
 #define INF 999999999
 
 int main()
 {
-	int graph[1001][1001],i,j,k,n,m;
+	lld graph[1001][1001],i,j,k,n,m;
 	cin>>n>>m;	//number of vertices and edges respectively
 
 	for(i=1;i<=n;i++)
@@ -20,7 +21,7 @@ int main()
 
 	for(i=1;i<=m;i++)
 	{
-		int u,v,w;
+		lld u,v,w;
 		cin>>u>>v>>w;
 		graph[u][v] = w;				//input graph
 		graph[v][u] = w;				//Shortest distance between (i,j) using atmost one edge
@@ -40,9 +41,9 @@ int main()
 	}
 
 	//Resulting all pair shortest path in given graph
-	for(int u=1;u<=n;u++)
+	for(lld u=1;u<=n;u++)
 	{
-		for(int v=1;v<=n;v++)
+		for(lld v=1;v<=n;v++)
 		{
 			cout<<graph[u][v]<<" ";
 		}

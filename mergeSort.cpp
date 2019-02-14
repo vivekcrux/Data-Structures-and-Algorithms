@@ -1,37 +1,42 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-/*
-swap function to swap two elements in the
-array
-*/
-void swap(int &a,int &b)
-{
-    int t = a;
-    a = b;
-    b = t;
-}
-
 
 //merge function to merge two sorted arrays
-void merge(int arr[],int s,int e)
+void merge(int A[],int s,int e)
 {
     int mid = (s+e)/2;
-    int i,j;
-    i=s;j=mid+1;
+    int i = s, j = mid+1;
+    vector<int> temp;
     while(i<=mid && j<=e)
     {
-        if(arr[i]<=arr[j])
+        if(A[i]<=A[j])
         {
+            temp.push_back(A[i]);
             i++;
         }
         else
         {
-            swap(arr[i],arr[j]);
+            temp.push_back(A[j]);
             j++;
         }
     }
+    while(i<=mid)
+    {
+        temp.push_back(A[i]);
+        i++;
+    }
+    while(j<=e)
+    {
+        temp.push_back(A[j]);
+        j++;
+    }
+    for(i=s;i<=e;i++)
+    {
+        A[i] = temp[i-s];
+    }
 }
+
 
 /*
 mergeSort function recursively call its left half and 
